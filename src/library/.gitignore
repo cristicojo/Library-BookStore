@@ -1,0 +1,10 @@
+.DS_Store
+
+/.idea/
+/out/
+
+/src/generics/
+/src/apartament_camera/
+/src/fisiere/
+/src/LinkedList/
+/src/stack/
