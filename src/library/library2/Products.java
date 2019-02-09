@@ -1,4 +1,4 @@
-package teste;
+package library.library2;
 
 public class Products<T> {
 

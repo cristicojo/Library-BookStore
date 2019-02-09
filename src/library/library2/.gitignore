@@ -3,10 +3,11 @@
 /.idea/
 /out/
 
-/src/generics/
 /src/apartament_camera/
-/src/fisiere/
+/src/chess
+/src/fisiere
+/src/generics/
 /src/LinkedList/
 /src/stack/
+/src/teste
 
-/Teste.java

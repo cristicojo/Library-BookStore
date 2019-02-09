@@ -1,4 +1,4 @@
-package teste;
+package library.library2;
 
 public interface Mes {
 
