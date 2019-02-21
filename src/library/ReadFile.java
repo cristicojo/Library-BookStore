@@ -73,7 +73,7 @@ public class ReadFile {
                 while (tokenizer.hasMoreTokens()) {
 
                     if (product.startsWith("N") || product.startsWith("n")
-                            || product.startsWith("Caiet") || product.startsWith("caiet") || product.startsWith("CAIET"))
+                            || product.startsWith("Caiet") || product.startsWith("caiet"))
 
                         notebookList.add(tokenizer.nextToken(","));
 
