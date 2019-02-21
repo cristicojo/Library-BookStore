@@ -10,14 +10,14 @@ public class Pen extends Products implements Discountable{
 
 
     @Override
-    public double CalculatedDiscountedPrice() {
+    public double calculatedDiscountedPrice() {
 
         return 0;
 
     }
 
     @Override
-    public String CalculatedDiscountedPricee() {
+    public String noPensMessage() {
         return "Ne pare rau!! Am ramas fara pixuri la oferta!!!!";
     }
 

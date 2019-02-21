@@ -10,9 +10,9 @@ public class Notebook extends Products implements Discountable {
 
 
     @Override
-    public double CalculatedDiscountedPrice() {
+    public double calculatedDiscountedPrice() {
 
-        if (isOnOffer)
+        if (isOnOffer())
 
             return price - (price * (offerDiscount / 2000));
         else
@@ -21,7 +21,7 @@ public class Notebook extends Products implements Discountable {
     }
 
     @Override
-    public String CalculatedDiscountedPricee() {
+    public String noPensMessage() {
         return null;
     }
 

@@ -9,9 +9,9 @@ public class Book extends Products implements Discountable{
     }
 
     @Override
-    public double CalculatedDiscountedPrice() {
+    public double calculatedDiscountedPrice() {
 
-        if (isOnOffer)
+        if (isOnOffer())
 
             return price - (price * (offerDiscount / 100));
         else
@@ -20,10 +20,9 @@ public class Book extends Products implements Discountable{
     }
 
     @Override
-    public String CalculatedDiscountedPricee() {
+    public String noPensMessage() {
         return null;
     }
-
 
 
 }

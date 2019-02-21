@@ -1,12 +1,13 @@
 package library;
 
-public class Products {
+public class Products<T> {
 
-     String title;
-    private int id;
+    String title;
+    int id;
     double price;
     boolean isOnOffer;
     double offerDiscount;
+
 
     public Products(String title, int id, double price, boolean isOnOffer, double offerDiscount) {
 

@@ -1,5 +1,6 @@
 package library;
 
+import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
@@ -8,15 +9,17 @@ public class Navigation {
     BookStore bookstore;
     Scanner s;
     PrintStream ps;
+    ReadFile rf;
 
-    public Navigation(BookStore bookstore, Scanner s, PrintStream ps) {
+    public Navigation(BookStore bookstore, Scanner s, PrintStream ps, ReadFile rf) {
 
         this.bookstore = bookstore;
         this.s = s;
         this.ps = ps;
+        this.rf = rf;
     }
 
-    public void mainMenu() throws ProductNameTooLongException, PriceTooHighException {
+    public void mainMenu() throws ProductNameTooLongException, PriceTooHighException, IOException {
         System.out.print("\tdati optiunea: ");
         int n = s.nextInt();
 
@@ -39,7 +42,7 @@ public class Navigation {
 
     }
 
-    public void addProduct() throws ProductNameTooLongException, PriceTooHighException {
+    public void addProduct() throws ProductNameTooLongException, PriceTooHighException, IOException{
         System.out.println();
         System.out.println(Texts.addProductsMenu());
 
@@ -71,7 +74,7 @@ public class Navigation {
 
     }
 
-    public void listProduct() throws ProductNameTooLongException, PriceTooHighException {
+    public void listProduct() throws ProductNameTooLongException, PriceTooHighException, IOException {
         System.out.println();
         System.out.println(Texts.listProductsMenu());
 
@@ -81,22 +84,22 @@ public class Navigation {
         switch (n) {
             case 1:
                 System.out.println();
-                bookstore.printBooks(ps);
+                bookstore.printBooks(rf);
                 listProduct();
 
             case 2:
                 System.out.println();
-                bookstore.printNotebooks(ps);
+                bookstore.printNotebooks(rf);
                 listProduct();
 
             case 3:
                 System.out.println();
-                bookstore.printPens(ps);
+                bookstore.printPens(rf);
                 listProduct();
 
             case 4:
                 System.out.println();
-                bookstore.printProducts(ps);
+                bookstore.printProducts(rf);
                 listProduct();
 
             case 5:
@@ -107,7 +110,7 @@ public class Navigation {
 
     }
 
-    public void buyProduct() throws ProductNameTooLongException, PriceTooHighException {
+    public void buyProduct() throws ProductNameTooLongException, PriceTooHighException, IOException{
         System.out.println();
         System.out.println(Texts.buyProductsMenu());
 
@@ -122,10 +125,10 @@ public class Navigation {
 
             case 2:
                 System.out.println();
-                System.out.println("Total carti: " + bookstore.totalBooks());
-                System.out.println("Total caiete: " + bookstore.totalNotebooks());
-                System.out.println("Total pixuri: " + bookstore.totalPens());
-                System.out.println("Total produse: " + bookstore.totalProducts());
+                System.out.println("Total carti: " + bookstore.totalPriceBooks());
+                System.out.println("Total caiete: " + bookstore.totalPriceNotebooks());
+                System.out.println("Total pixuri: " + bookstore.totalPricePens());
+                System.out.println("Total produse: " + bookstore.totalPriceProducts());
                 buyProduct();
 
             case 3:
@@ -139,7 +142,7 @@ public class Navigation {
         }
     }
 
-    public void sortProduct() throws ProductNameTooLongException, PriceTooHighException {
+    public void sortProduct() throws ProductNameTooLongException, PriceTooHighException, IOException{
         System.out.println();
         System.out.println(Texts.sortProductsMenu());
 
@@ -148,75 +151,63 @@ public class Navigation {
 
         switch (n) {
             case 1:
-                bookstore.sortBooksA();
+                bookstore.sortBooksTA();
                 System.out.println();
-                bookstore.printBooks(ps);
                 sortProduct();
 
             case 2:
-                bookstore.sortBooksD();
+                bookstore.sortBooksTD();
                 System.out.println();
-                bookstore.printBooks(ps);
                 sortProduct();
 
             case 3:
-                bookstore.sortBooksAI();
+                bookstore.sortBooksIA();
                 System.out.println();
-                bookstore.printBooks(ps);
                 sortProduct();
 
             case 4:
-                bookstore.sortBooksDI();
+                bookstore.sortBooksID();
                 System.out.println();
-                bookstore.printBooks(ps);
                 sortProduct();
 
             case 5:
-                bookstore.sortNotebooksA();
+                bookstore.sortNotebooksTA();
                 System.out.println();
-                bookstore.printNotebooks(ps);
                 sortProduct();
 
             case 6:
-                bookstore.sortNotebooksD();
+                bookstore.sortNotebooksTD();
                 System.out.println();
-                bookstore.printNotebooks(ps);
                 sortProduct();
 
             case 7:
-                bookstore.sortNotebooksAI();
+                bookstore.sortNotebooksIA();
                 System.out.println();
-                bookstore.printNotebooks(ps);
                 sortProduct();
 
             case 8:
-                bookstore.sortNotebooksDI();
+                bookstore.sortNotebooksID();
                 System.out.println();
-                bookstore.printNotebooks(ps);
                 sortProduct();
 
             case 9:
-                bookstore.sortPensA();
+                bookstore.sortPensTA();
                 System.out.println();
-                bookstore.printPens(ps);
                 sortProduct();
 
             case 10:
-                bookstore.sortPensD();
+                bookstore.sortPensTD();
                 System.out.println();
-                bookstore.printPens(ps);
                 sortProduct();
 
             case 11:
-                bookstore.sortPensAI();
+                bookstore.sortPensIA();
                 System.out.println();
-                bookstore.printPens(ps);
                 sortProduct();
 
             case 12:
-                bookstore.sortPensDI();
+                bookstore.sortPensID();
                 System.out.println();
-                bookstore.printPens(ps);
                 sortProduct();
 
             case 13:
