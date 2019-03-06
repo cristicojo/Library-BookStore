@@ -1,5 +1,3 @@
-package library;
-
 public class Products<T> {
 
     String title;

@@ -1,5 +1,3 @@
-package library;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,7 +18,7 @@ public class ReadFile {
 
     ReadFile() throws IOException {
 
-        path = Paths.get("/Users/cristi/Desktop/produse.txt");
+        path = Paths.get("/Users/cristi/proiecte/Library-BookStore/produse.txt");
         productsFile = Files.readAllLines(path);
 
     }

@@ -1,5 +1,3 @@
-package library;
-
 public class Texts {
 
     public static String mainMenu() {

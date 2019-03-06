@@ -1,0 +1,11 @@
+Pix: pixcristi,12,34.0,da
+Pix: pixsmecher ham,56,8.0,nu
+Carte: carte cojo smecher,5,67.0,nu
+Carte: carte de sters pe jos,12,34.0,da,8
+Notebook: caiet mare,90,7.0,da,23
+Notebook: caiet ui,1,2.0,nu
+Carte: ergerg,5,6.0,nu
+Carte: ewefewfw,3,4.0,da,3
+Notebook: ergreg,9,8.0,da,5
+Notebook: tttt,6,7.0,nu
+Pix: rrrrr,5,6.0,da

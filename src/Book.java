@@ -1,5 +1,3 @@
-package library;
-
 public class Book extends Products implements Discountable{
 
 

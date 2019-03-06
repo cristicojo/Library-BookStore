@@ -1,5 +1,3 @@
-package library;
-
 public interface Discountable {
 
     double calculatedDiscountedPrice();

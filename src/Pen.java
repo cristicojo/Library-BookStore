@@ -1,5 +1,3 @@
-package library;
-
 public class Pen extends Products implements Discountable{
 
 
